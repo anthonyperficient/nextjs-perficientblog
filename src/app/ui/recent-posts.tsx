@@ -10,7 +10,7 @@ export default async function RecentPosts() {
             <ul className="list-unstyled">
                 {
                     posts.slice(0, 3).map((post) => (
-                        <li>
+                        <li key={post.id}>
                             <a className="d-flex flex-column flex-lg-row gap-3 align-items-start align-items-lg-center py-3 link-body-emphasis text-decoration-none border-top" href="#">
                                 <Image alt={post.title.rendered} src={post?.yoast_head_json?.og_image[0]?.url} width={1000} height={1000} sizes="100vw" style={{ width: '150px', height: 'auto', }} className="bd-placeholder-img" aria-hidden="true"></Image>
                                 <div className="col-lg-8">
